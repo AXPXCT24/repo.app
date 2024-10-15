@@ -28,7 +28,7 @@ export const createUser = async (req, res) => {
 
   try {
     const hashedPword = await bcrypt.hash(password, 10);
-    
+
     db.run(
       "INSERT INTO User (username, password, authority) VALUES (?, ?, ?)",
       [username, hashedPword, authority],

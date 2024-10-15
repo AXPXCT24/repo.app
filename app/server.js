@@ -8,7 +8,7 @@ const port = 3002;
 app.use(
   cors({
     origin: "*",
-    credentials: true,
+    methods: ["GET", "POST", "DELETE", "PUT", "PATCH", "OPTIONS"],
   })
 );
 
